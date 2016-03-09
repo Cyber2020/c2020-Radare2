@@ -5,10 +5,10 @@
 #include <r_list.h>
 
 // XXX must be configurable by the user
-#define FCN_DEPTH 512
+#define FCN_DEPTH 1024
 
 // 16 KB is the maximum size for a basic block
-#define MAXBBSIZE 16 * 1024
+#define MAXBBSIZE 256 * 1024
 
 #define JMP_IS_EOB 1
 #define JMP_IS_EOB_RANGE 32
@@ -16,7 +16,7 @@
 
 // 64KB max size
 // 256KB max function size
-#define MAX_FCN_SIZE (1024*256)
+#define MAX_FCN_SIZE (1024*1024)
 
 #define MAX_JMPTBL_SIZE 1000
 #define MAX_JMPTBL_JMP 10000
