@@ -5,10 +5,10 @@
 #include <r_list.h>
 
 // XXX must be configurable by the user
-#define FCN_DEPTH 1024
+#define FCN_DEPTH 16384
 
 // 16 KB is the maximum size for a basic block
-#define MAXBBSIZE 256 * 1024
+#define MAXBBSIZE 512 * 1024
 
 #define JMP_IS_EOB 1
 #define JMP_IS_EOB_RANGE 32
@@ -16,10 +16,10 @@
 
 // 64KB max size
 // 256KB max function size
-#define MAX_FCN_SIZE (1024*1024)
+#define MAX_FCN_SIZE (128*1024*1024)
 
-#define MAX_JMPTBL_SIZE 1000
-#define MAX_JMPTBL_JMP 10000
+#define MAX_JMPTBL_SIZE 10000
+#define MAX_JMPTBL_JMP 100000
 
 #define DB a->sdb_fcns
 #define EXISTS(x,y...) snprintf (key, sizeof(key)-1,x,##y),sdb_exists(DB,key)
